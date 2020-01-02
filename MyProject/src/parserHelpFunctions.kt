@@ -1,9 +1,11 @@
 private val punct_ = arrayListOf<Char>('.', ',', ':', ';', '-')
-fun isPunctuation(ch: Char?): Boolean {
+fun isPunctuation(ch: Char?): Boolean
+{
   return ch in punct_
 }
 
-fun parseWord(str: String?, index: Int): Pair<String, Int> {
+fun parseWord(str: String?, index: Int): Pair<String, Int>
+{
   var line: String = ""
   var i = index
 
@@ -18,7 +20,8 @@ fun parseWord(str: String?, index: Int): Pair<String, Int> {
   return Pair(line, i)
 }
 
-fun parseDigit(str: String?, index: Int): Pair<String, Int> {
+fun parseDigit(str: String?, index: Int): Pair<String, Int>
+{
   var line: String = ""
   var i = index
 
@@ -33,7 +36,8 @@ fun parseDigit(str: String?, index: Int): Pair<String, Int> {
   return Pair(line, i)
 }
 
-fun parsePunct(str: String?, index: Int): Pair<String, Int> {
+fun parsePunct(str: String?, index: Int): Pair<String, Int>
+{
   var line: String = ""
   var i = index
 

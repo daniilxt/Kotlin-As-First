@@ -1,4 +1,5 @@
-fun main() {
+fun main()
+{
   val t = Text()
 
   do {

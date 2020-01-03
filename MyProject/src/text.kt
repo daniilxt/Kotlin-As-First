@@ -1,5 +1,4 @@
 import java.util.*
-import kotlin.test.todo
 
 class Text() {
   private var text_ = arrayListOf<String>()
@@ -32,9 +31,22 @@ class Text() {
     }
   }
 
-  fun printContainer(): Unit {
-    for (i in text_) {
+  fun printContainer(minSize: Int): Unit {
+/*    for (i in text_) {
       println("$i ")
+    }*/
+    var line = StringBuilder()
+    for (item in text_) {
+      if ((line.toString() + item).length <= minSize) {
+        line.append(item)
+        line.append(' ')
+      } else {
+        println(line)
+        line.clear()
+      }
+    }
+    if (line.isNotEmpty()){
+      println(line)
     }
   }
 }

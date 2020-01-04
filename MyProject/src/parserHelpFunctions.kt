@@ -1,4 +1,4 @@
-private val punct_ = arrayListOf<Char>('.', ',', ':', ';', '-')
+val punct_ = arrayListOf<Char>('.', ',', ':', ';', '-')
 fun isPunctuation(ch: Char?): Boolean
 {
   return ch in punct_
@@ -50,4 +50,9 @@ fun parsePunct(str: String?, index: Int): Pair<String, Int>
     i++
   }
   return Pair(line, i)
+}
+
+fun firstUpperCase(word:String):String {
+  if (word.isEmpty()) return "";//или return word;
+  return word.substring(0, 1).toUpperCase() + word.substring(1)
 }

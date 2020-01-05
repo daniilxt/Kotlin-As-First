@@ -24,10 +24,14 @@ fun parseDigit(str: String?, index: Int): Pair<String, Int>
 {
   var line: String = ""
   var i = index
+  val delimiter = arrayListOf<Char>('.', ',')
+  var countDelimiters = 0
 
-  while ((str?.get(i)?.isDigit()!!) && (i != str.lastIndex)) {
+  while (((str?.get(i)?.isDigit()!!) && (i != str.lastIndex))
+      || ((str.get(i) in delimiter) && (i != str.lastIndex)) && countDelimiters <= 1) {
     line += str[i]
     i++
+    if (str[i] in delimiter) countDelimiters++
   }
   if (i == str.lastIndex && str[i].isDigit()) {
     line += str[i]

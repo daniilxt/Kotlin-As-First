@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 import kotlin.math.PI
+import kotlin.test.assertEquals
 
 class Tests {
     @Test
